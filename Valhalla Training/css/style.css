@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e5e5f7;
+  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+  background-position: 0 0, 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  min-height: 100vh;
+}
+
+
+
+  /* Estilo para el elemento h1 */
+h1 {
+  font-family: 'Roboto', sans-serif; 
+  color: #000000; 
+  text-transform: uppercase; /* Transforma el texto a mayúsculas para mayor impacto */
+  text-align: center; /* Centrar el texto */
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  background: linear-gradient(to right, #3866f2, #3866f2); /* Degradado de fondo */
+  -webkit-background-clip: text; /* Solo el texto toma el degradado */
+  color: transparent; 
+  letter-spacing: 3px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* sombrita papa*/
+}
+
+
+
+/* Estilos de la nav */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    color: black;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+
+}
+.logo-img {
+    width: 200px; /* Ajusta el tamaño según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.formulario {
+  background-color: #fff;
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 4.5em 3em;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgb(0, 0, 0 / 30%);
+  text-align: center;
+}
+
+.fomulario_titulo {
+  font-size: 2rem;
+  margin-bottom: .5em;
+}
+
+.form_container {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form_group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form_input, .form_select{
+  width: 100%;
+  background: none;
+  color: #0c0c0c;
+  font-size: 1rem;
+  padding: .6em .3em;
+  border-radius: .5em;
+  border: 1px solid #ccc;
+}
+
+.form_color{
+  width: 100%;
+  color:#ee4747;
+  background: none;
+  border-radius: .5em;
+  border: 1px solid #ccc;
+}
+
+.form_button, .form_button_borrar {
+  width: 100%;
+  background: #3866f2;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  padding: .8em;
+  border: none;
+  border-radius: .5em;
+  cursor: pointer;
+  
+}
+
+.form_button_borrar {
+  background: #ee4747;
+}
+.button_group {
+  display: flex;
+  gap: 20px;
+  grid-column: span 2;
+}
+
+/* Estilos de la tarjeta */
+.seleccionlistaProductos{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+.tarjetas {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  
+}
+
+.tarjetas:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+.tarjetas img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.tarjetas p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.tarjetas p:nth-child(2) {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #000;
+}
+
+
+
+.tarjetas br {
+  margin-bottom: 10px;
+}
+
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.paginacion button.active {
+  background-color: #ccc;
+}
+
+
+
+/* Estilos para el botón */
+.search-button {
+  background-color: #f1f1f1; /* Fondo gris claro */
+  border: none; /* Sin borde */
+  color: black; /* Texto negro */
+  align-items: center; /* Centrar el ícono verticalmente */
+  justify-content: center; /* Centrar el ícono horizontalmente */
+  cursor: pointer; /* Puntero de mano al pasar sobre el botón */
+  border-radius: 40%; 
+  width: 40px; /* Ancho del botón */
+  height: 30px; /* Alto del botón */
+}
+
+/* Estilos para el ícono */
+.search-icon {
+  width: 20px; 
+  height: 20px; 
+}
+
+
+/* Estilos para la tabla de productos */
+.resultados {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#tablaResultados {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+#tablaResultados th, #tablaResultados td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#tablaResultados th {
+  background-color: #3866f2;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#tablaResultados tr:hover {
+  background-color: #f1f1f1;
+}
+
+#tablaResultados tr:last-child td {
+  border-bottom: none;
+}
+
+#tablaResultados td img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Estilos para la sección de filtros */
+.filtros {
+  background-color: #fff;
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.filtros label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filtros input, .filtros select, .filtros button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.filtros button {
+  background-color: #3866f2;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.filtros button:hover {
+  background-color: #2a4fbf;
+}
+
+/* Estilos para la paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  background-color: #3866f2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.paginacion button:hover {
+  background-color: #2a4fbf;
+}
+
+.paginacion button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.paginacion #pageInfo {
+  margin: 0 10px;
+  font-weight: bold;
+}
+/*  instrucciones */
+
+.instrucciones {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 80px;
+  margin-top: 40px;
+}
+
+
+
+
+

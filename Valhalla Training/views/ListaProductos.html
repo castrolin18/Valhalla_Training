@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="icon" href="https://t4.ftcdn.net/jpg/03/29/67/97/360_F_329679742_4vrHnqpRSsqiTrLWEsmpLwvwHc3aNc4I.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <a href=""> <img src="/src/img/logo.png" alt="valhalla" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Registro</a></li>
+                <li><a href="ListaProductos.html">Listado De Productos</a></li>
+                <!-- Añadir el botón de búsqueda con ícono -->
+                <div class="search-button-container">
+                    <button class="search-button" onclick="window.location.href='/views/Filtro.html'">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="Buscar" class="search-icon"/>
+                    </button>
+                </div>
+
+            </ul>
+            
+        </nav>
+    </header>
+    <h1>Lista de Productos</h1>
+<section class="seleccionlistaProductos" id="listaProductos">
+        <!-- las tarjetas salen aqui  -->
+    
+</section>
+<section class="paginacion" id="paginacion">
+    <button id="anterior" onclick="cambiarPagina(-1)">Anterior</button>
+    <span id="pageInfo"></span>
+    <button id="siguiente" onclick="cambiarPagina(1)">Siguiente</button>
+</section>
+
+
+    <script src="/js/jslogic.js"></script>
+</body>
+</html>

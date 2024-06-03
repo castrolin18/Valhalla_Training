@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="icon" href="https://t4.ftcdn.net/jpg/03/29/67/97/360_F_329679742_4vrHnqpRSsqiTrLWEsmpLwvwHc3aNc4I.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href=""><img src="/src/img/logo.png" alt="valhalla" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Registro</a></li>
+                <li><a href="ListaProductos.html">Listado De Productos</a></li>
+                <div class="search-button-container">
+                    <button class="search-button" onclick="window.location.href='/views/Filtro.html'">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="Buscar" class="search-icon"/>
+                    </button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <h1>Filtro de Productos</h1>
+
+    <!-- Filtros -->
+    <section class="filtros" >
+        <label for="filtroNombre">Nombre:</label>
+        <input type="text" id="filtroNombre">
+        
+        <label for="filtroCategoria">Categoría:</label>
+        <select id="filtroCategoria">
+            <option value="">Seleccione una categoría</option>
+            <option value="futbol">Fútbol</option>
+            <option value="baloncesto">Baloncesto</option>
+            <option value="tennis">Tenis</option>
+            <option value="voley">Vóley</option>
+            <option value="gym">Gym</option>
+            <option value="ciclismo">Ciclismo</option>
+            <option value="patinaje">Patinaje</option>
+            <option value="badminton">Bádminton</option>
+            <option value="surf">Surf</option>
+            <option value="accesorios">Accesorios</option>
+            <option value="boxeo">Boxeo</option>
+            <option value="natacion">Natación</option>
+            <option value="running">Running</option>
+            <option value="pingpong">Pingpong</option>
+            <option value="escalada">Escalada</option>
+            <option value="golf">Golf</option>
+            <option value="squash">Squash</option>
+            <option value="senderismo">Senderismo</option>
+            <option value="esqui">Esquí</option>
+            <option value="beisbol">Béisbol</option>
+            <option value="yoga">Yoga</option>
+            <option value="dardos">Dardos</option>
+        </select>
+        
+        <label for="filtroPrecio">Precio máximo:</label>
+        <input type="number" id="filtroPrecio">
+        
+        <button onclick="buscarProductos()">Buscar</button>
+        <button onclick="limpiarFiltros()">Limpiar</button>
+    </section>
+
+    <!-- Resultados -->
+    <section class="resultados">
+        <table id="tablaResultados">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Imagen</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Color</th>
+                    <th>Garantía</th>
+                    <th>Material</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los resultados se mostrarán aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="paginacion" id="paginacion">
+        <button id="anterior" onclick="cambiarPaginaFiltro(-1)">Anterior</button>
+        <span id="pageInfo"></span>
+        <button id="siguiente" onclick="cambiarPaginaFiltro(1)">Siguiente</button>
+    </section>
+
+    <script src="/js/jslogic.js"></script>
+</body>
+</html>

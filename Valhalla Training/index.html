@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALHALLA TRAINING</title>
+    <link rel="icon" href="https://t4.ftcdn.net/jpg/03/29/67/97/360_F_329679742_4vrHnqpRSsqiTrLWEsmpLwvwHc3aNc4I.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+                <a href=""> <img src="/src/img/logo.png" alt="valhalla" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Registro</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <form id="registroFormulario"  class="formulario">
+        <h2 class="fomulario_titulo">Registrar Producto</h2>
+        <div class="form_container">
+            <div class="form_group">
+                <label for="idProducto" class="form_label">Id Producto:</label>
+                <input type="text" id="idProducto" class="form_input" required>
+            </div>
+            <div class="form_group">
+                <label for="nombreProducto" class="form_label">Nombre Producto:</label>
+                <input type="text" id="nombreProducto" class="form_input" maxlength="20" required>
+            </div>
+            <div class="form_group">
+                <label for="categoria" class="form_label">Categoría:</label>
+                <select id="selectorCategoria" class="form_select" required>
+                    <option selected>Seleccione una categoría</option>
+                    <option value="Futbol">Futbol</option>
+                    <option value="Baloncesto">Baloncesto</option>
+                    <option value="Tennis">Tennis</option>
+                    <option value="Voley">Voley</option>
+                    <option value="Gym">Gym</option>
+                    <option value="Ciclismo">Ciclismo</option>
+                    <option value="Patinaje">Patinaje</option>
+                    <option value="Badminton">Badminton</option>
+                    <option value="Surf">Surf</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <label for="imagen" class="form_label">Imagen:</label>
+                <select id="imagen" class="form_select" required>
+                    <option selected>Seleccione una imagen</option>
+                    <option value="/src/img/1.jpg">Imagen 1</option>
+                    <option value="/src/img/2.jpg">Imagen 2</option>
+                    <option value="/src/img/3.jpg">Imagen 3</option>
+                    <option value="/src/img/4.jpg">Imagen 4</option>
+                    <option value="/src/img/5.jpg">Imagen 5</option>
+                    <option value="/src/img/6.jpg">Imagen 6</option>
+                    <option value="/src/img/7.jpg">Imagen 7</option>
+                    <option value="/src/img/8.jpg">Imagen 8</option>
+                    <option value="/src/img/9.jpg">Imagen 9</option>
+                    <option value="/src/img/10.jpg">Imagen 10</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <label for="precio" class="form_label">Precio:</label>
+                <input type="number" id="precio" class="form_input" required>
+            </div>
+            <div class="form_group">
+                <label for="color" class="form_label" >Color:</label>
+                <input type="color" id="color" value="#3866f2" class="form_color" required>
+            </div>
+            <div class="form_group">
+                <label for="Grantia" class="form_label" >Grantia:</label>
+                <select id="grantia" class="form_select" required>
+                    <option selected>Seleccione una Opcion</option>
+                    <option value="6 meses">6 meses </option>
+                    <option value="1 años">1 año</option>
+                    <option value="2 año">2 años</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <label for="material" class="form_label">Material:</label>
+                <input type="text" id="material" class="form_input" required>
+            </div>
+            <div class="button_group">
+                <button type="submit" onclick="validarRegistro(event)" class="form_button">Registrar</button>
+                <button type="reset" class="form_button_borrar">Limpiar Campos</button>
+            </div>
+        </div>
+    </form>
+    <script src="js/jslogic.js"></script>
+</body>
+</html>
